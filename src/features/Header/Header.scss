@@ -1,0 +1,7 @@
+@import '../../assets/theme/variables';
+.header {
+    background: $p-color;
+    @include shadow-default;
+    color: white;
+    padding: 20px 12px;
+}

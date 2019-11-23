@@ -1,26 +1,40 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import "./assets/theme/global.scss";
+
+import Header from "./features/Header/Header";
+import Footer from './features/Footer/Footer';
+import Search from './features/Search/Search';
+import LyricWrapper from './features/LyricWrapper/LyricWrapper';
+
+class App extends React.Component {
+
+  constructor(){
+    super();
+
+    this.state = {
+      searchWord: ""
+    }
+
+    this.handleSearch = this.handleSearch.bind(this);
+  }
+
+  handleSearch(e) {
+    this.setState({
+      searchWord: e.target.value
+    });
+  }
+
+  render() {
+    return (
+      <>
+        <Header />
+        <Search handleSearch={this.handleSearch} />
+        <LyricWrapper searchWord={this.state.searchWord} />
+        <Footer />
+      </>
+    );
+  }
 }
 
 export default App;

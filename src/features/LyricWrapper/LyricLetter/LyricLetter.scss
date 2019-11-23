@@ -1,0 +1,14 @@
+@import '../../../assets/theme/variables';
+.lyricLetter {
+    font-size: 14px;
+    font-family: "Century Gothic";
+    .-btngoback {
+        background: $p-color;
+        border: none;
+        border-radius: 5px;
+        color: $f-color;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        padding: 12px;
+    }
+}

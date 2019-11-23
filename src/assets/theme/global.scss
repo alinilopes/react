@@ -1,0 +1,16 @@
+@import './reset';
+@import './variables';
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+html,
+body,
+#root {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+body {
+    background: $s-color;
+    font-family: 'Montserrat', sans-serif;
+}
